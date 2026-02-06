@@ -22,7 +22,7 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
     return (
         <div className={styles.roomDetail}>
             <Hero
-                accent="Hello"
+                accent="Stay in"
                 title={room.title}
                 subtitle="Distinctive Luxury"
                 imageSrc={room.imageSrc}

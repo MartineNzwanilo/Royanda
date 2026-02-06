@@ -5,8 +5,8 @@ export default function EventsPage() {
     return (
         <main>
             <Hero
-                accent="Hello"
-                title="Events"
+                accent="Celebrate"
+                title="Gatherings & Events"
                 subtitle="Unforgettable Moments"
                 imageSrc="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2098&auto=format&fit=crop"
             />

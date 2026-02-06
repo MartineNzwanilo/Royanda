@@ -5,7 +5,7 @@ export default function AmenitiesPage() {
     return (
         <main>
             <Hero
-                accent="Hello"
+                accent="The Art of Living"
                 title="Amenities"
                 subtitle="Designed for Your Comfort"
                 imageSrc="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=2070&auto=format&fit=crop"

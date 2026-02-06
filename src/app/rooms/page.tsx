@@ -6,7 +6,7 @@ export default function RoomsPage() {
     return (
         <main>
             <Hero
-                accent="Hello"
+                accent="Indulge in"
                 title="Rooms & Suites"
                 subtitle="Distinctive Luxury"
                 imageSrc="https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=2070&auto=format&fit=crop"
