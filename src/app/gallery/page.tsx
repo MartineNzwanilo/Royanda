@@ -57,8 +57,8 @@ export default function GalleryPage() {
     return (
         <main className={styles.galleryPage}>
             <Hero
+                accent="The Collection"
                 title="Gallery"
-                subtitle="The Collection"
                 imageSrc="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=2074&auto=format&fit=crop"
             />
 

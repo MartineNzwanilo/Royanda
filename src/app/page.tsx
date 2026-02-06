@@ -7,8 +7,8 @@ export default function Home() {
     <main>
 
       <Hero
-        title="Welcome to Yolanda Hotel"
-        subtitle=""
+        accent="Welcome to"
+        title="Yolanda Hotel"
         // Using a more "Royal" cinematic shot
         imageSrc="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop"
       />

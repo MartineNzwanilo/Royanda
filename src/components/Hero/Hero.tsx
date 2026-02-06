@@ -6,10 +6,11 @@ import Image from "next/image";
 interface HeroProps {
     title: string;
     subtitle?: string;
+    accent?: string; // New: Script-font accent (e.g., "Welcome to")
     imageSrc: string; // Dynamic hero image
 }
 
-export default function Hero({ title, subtitle, imageSrc }: HeroProps) {
+export default function Hero({ title, subtitle, accent, imageSrc }: HeroProps) {
     const heroRef = useRef<HTMLDivElement>(null);
 
     const scrollToNext = () => {
@@ -38,8 +39,9 @@ export default function Hero({ title, subtitle, imageSrc }: HeroProps) {
             </div>
 
             <div className={styles.content}>
+                {accent && <span className={styles.headingScript}>{accent}</span>}
+                <h1 className={styles.headingMain}>{title}</h1>
                 {subtitle && <span className={styles.subheading}>{subtitle}</span>}
-                <h1 className={`${styles.headingMain} ${styles.headingScript}`}>{title}</h1>
             </div>
 
             <button

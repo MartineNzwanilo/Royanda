@@ -58,35 +58,40 @@
 .subheading {
     font-family: var(--font-jost);
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 0.9rem;
     letter-spacing: 0.4em;
-    margin-bottom: 1rem;
+    margin-top: 1.5rem;
     opacity: 0;
-    animation: fadeUp 1s ease 0.5s forwards;
+    animation: fadeUp 1s ease 1.2s forwards;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .headingMain {
     font-family: var(--font-jost);
     text-transform: uppercase;
-    font-size: 5rem;
-    line-height: 0.9;
-    letter-spacing: 0.1em;
+    font-size: 5.5rem;
+    line-height: 1;
+    letter-spacing: 0.15em;
     margin: 0;
     opacity: 0;
     animation: fadeUp 1s ease 0.8s forwards;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    font-weight: 500;
 }
 
 .headingScript {
     font-family: var(--font-pinyon);
     text-transform: none;
-    font-size: 5rem;
+    font-size: 4rem;
     color: #FFFFFF;
-    margin-top: -1rem;
+    margin-bottom: -1.5rem;
     letter-spacing: normal;
-    animation: fadeUp 1.2s ease 1s forwards;
+    opacity: 0;
+    animation: fadeUp 1.2s ease 0.5s forwards;
     white-space: nowrap;
-    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    z-index: 5;
+    position: relative;
 }
 
 .scrollButton {

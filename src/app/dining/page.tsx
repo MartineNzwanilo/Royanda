@@ -5,6 +5,7 @@ export default function DiningPage() {
     return (
         <main>
             <Hero
+                accent="Experience"
                 title="Angel Roofbar & Dining"
                 subtitle="Culinary Excellence with a View"
                 imageSrc="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format&fit=crop"
