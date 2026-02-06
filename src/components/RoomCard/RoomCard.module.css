@@ -1,0 +1,70 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    background: var(--primary-bg);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3/2;
+    overflow: hidden;
+}
+
+.imageWrapper img {
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.card:hover .imageWrapper img {
+    transform: scale(1.1);
+}
+
+.content {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.title {
+    font-family: var(--font-jost);
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
+    color: var(--primary-text);
+}
+
+.description {
+    font-family: var(--font-eb-garamond);
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 1.5rem;
+}
+
+.details {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 0.85rem;
+    font-family: var(--font-jost);
+    text-transform: uppercase;
+    color: var(--secondary-accent);
+    opacity: 0.8;
+}
+
+.action {
+    margin-top: 1.5rem;
+    display: inline-block;
+    font-family: var(--font-jost);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    border-bottom: 1px solid var(--secondary-accent);
+}

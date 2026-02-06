@@ -1,0 +1,59 @@
+.section {
+    padding: 8rem 5vw;
+    background-color: #f9f9f9;
+    /* Light contrast background */
+    text-align: center;
+    color: var(--primary-text);
+}
+
+.heading {
+    font-family: var(--font-jost);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 1rem;
+    margin-bottom: 4rem;
+    opacity: 0.6;
+}
+
+.carousel {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.quote {
+    font-family: var(--font-eb-garamond);
+    font-size: 2rem;
+    font-style: italic;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.author {
+    font-family: var(--font-jost);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    opacity: 0.8;
+}
+
+.controls {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: var(--secondary-accent);
+}

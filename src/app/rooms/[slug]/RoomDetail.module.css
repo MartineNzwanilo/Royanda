@@ -1,0 +1,147 @@
+.roomDetail {
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+.contentSection {
+    padding: 6rem 5vw;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 6rem;
+}
+
+@media (max-width: 1024px) {
+    .contentSection {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+}
+
+.mainInfo h2 {
+    font-family: var(--font-jost);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #888;
+    margin-bottom: 1.5rem;
+}
+
+.description {
+    font-family: var(--font-eb-garamond);
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.specs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+    border-top: 1px solid #eee;
+    padding-top: 3rem;
+}
+
+.specItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.specLabel {
+    font-family: var(--font-jost);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #999;
+}
+
+.specValue {
+    font-family: var(--font-eb-garamond);
+    font-size: 1.125rem;
+    color: #222;
+}
+
+.sidebar {
+    position: sticky;
+    top: 6rem;
+    height: fit-content;
+}
+
+.amenitiesBox {
+    background-color: #f9f9f9;
+    padding: 3rem;
+    border-radius: 4px;
+}
+
+.amenitiesBox h3 {
+    font-family: var(--font-jost);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+}
+
+.amenitiesList {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.amenitiesList li {
+    font-family: var(--font-eb-garamond);
+    font-size: 1rem;
+    color: #555;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.amenitiesList li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #282826;
+}
+
+.bookingCTA {
+    margin-top: 3rem;
+    width: 100%;
+    padding: 1.25rem;
+    background-color: #282826;
+    color: white;
+    font-family: var(--font-jost);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.bookingCTA:hover {
+    background-color: #c41e3a;
+    /* Royal Red highlight */
+}
+
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+    font-family: var(--font-jost);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.backLink:hover {
+    color: #222;
+}

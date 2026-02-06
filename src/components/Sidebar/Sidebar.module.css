@@ -1,0 +1,174 @@
+/* The Curtain Container - sits above everything */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 101;
+    /* Below hamburger (102) */
+    pointer-events: none;
+    display: flex;
+    /* Row layout for two panels */
+    visibility: hidden;
+    /* HIDDEN when closed so background images don't block view */
+    transition: visibility 0.8s step-end;
+    /* Delay hiding until animation done? No, step-end keeps it visible during transition */
+}
+
+.open {
+    pointer-events: all;
+    visibility: visible;
+    transition: visibility 0s;
+    /* Immediate show */
+}
+
+/* The Two Curtains (The "Gate") */
+.curtainLeft,
+.curtainRight {
+    width: 50%;
+    height: 100%;
+    background-color: #111111;
+    transition: transform 0.9s cubic-bezier(0.7, 0, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+    z-index: 100;
+}
+
+/* Off-screen initial positions */
+.curtainLeft {
+    transform: translateX(-100.5%);
+    /* Extra 0.5% to avoid hairline gap */
+}
+
+.curtainRight {
+    transform: translateX(100.5%);
+}
+
+/* Meeting in the center */
+.open .curtainLeft,
+.open .curtainRight {
+    transform: translateX(0);
+}
+
+/* Image Container - This contains the background images */
+.imageContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    /* BEHIND curtains initially */
+    opacity: 0;
+    visibility: hidden;
+}
+
+.imagesVisible {
+    opacity: 1;
+    visibility: visible;
+    z-index: 150;
+    /* MOVES ABOVE curtains after they meet */
+    transition: opacity 2s ease;
+    /* Professional slow fade-in */
+}
+
+/* Dynamic Hover Image Background */
+.hoverImageBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    filter: brightness(0.4);
+}
+
+.activeImage {
+    opacity: 1 !important;
+}
+
+/* Content Container - Fades in WITH the images */
+.menuContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+    /* Topmost */
+    display: flex;
+    opacity: 0;
+    transition: opacity 1s ease 1.2s;
+    /* Start fading in shortly after curtains meet */
+    color: #fff;
+}
+
+.open .menuContent {
+    opacity: 1;
+}
+
+/* Menu Layout */
+.container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    /* Centered layout as usually preferred in split */
+    align-items: center;
+    height: 100%;
+    padding: 5vw;
+    position: relative;
+    z-index: 20;
+}
+
+.navColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.linkItem {
+    font-family: var(--font-jost);
+    /* Switching to Jost for that "Pro" editorial look on menu */
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    letter-spacing: 0.1em;
+}
+
+.linkItem:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.contactInfo {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    font-family: var(--font-eb-garamond);
+    color: #999;
+}
+
+@media (max-width: 1024px) {
+    .linkItem {
+        font-size: 1.8rem;
+    }
+
+    .container {
+        padding: 5vw;
+        align-items: center;
+    }
+
+    .curtainLeft,
+    .curtainRight {
+        transition-duration: 0.6s;
+    }
+}

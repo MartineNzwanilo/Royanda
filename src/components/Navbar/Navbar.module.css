@@ -1,0 +1,150 @@
+/* Navbar Container */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5vw;
+    z-index: 105;
+    transition: all 0.4s ease;
+    mix-blend-mode: difference;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.scrolled {
+    background-color: var(--primary-bg);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    mix-blend-mode: normal;
+    color: var(--primary-text);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Hamburger - Pure CSS Icon */
+.hamburger {
+    justify-self: start;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    z-index: 110;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    transform-origin: center;
+}
+
+/* X Animation States */
+.open .line:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.open .line:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.open .line:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Center: Logo */
+.logoBlock {
+    justify-self: center;
+    /* Ensures it stays in the middle */
+    text-align: center;
+    /* Prevent logo from breaking layout on small screens */
+    min-width: 0;
+}
+
+.logoText {
+    font-family: var(--font-jost);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.25em;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Right: Action */
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.navItem {
+    font-family: var(--font-jost);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    display: none;
+}
+
+.bookBtn {
+    font-family: var(--font-jost);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    padding: 0.6rem 1.2rem;
+    background-color: #8B1E1E;
+    color: #FFFFFF;
+    border: none;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.bookBtn:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    .navbar {
+        padding: 2rem 5vw;
+    }
+
+    .hamburger {
+        width: 40px;
+        height: 24px;
+        /* Slightly larger on desktop */
+    }
+
+    .open .line:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+    }
+
+    .open .line:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+    }
+
+    .bookBtn {
+        font-size: 0.85rem;
+        padding: 0.75rem 2rem;
+        letter-spacing: 0.2em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .navItem {
+        display: block;
+    }
+}
+
+/* Fix for blend mode issues on dark backgrounds in sidebar */
+.hamburgerOpen {
+    color: #FFFFFF !important;
+}
